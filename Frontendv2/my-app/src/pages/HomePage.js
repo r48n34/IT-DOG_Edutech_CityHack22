@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import { basicCallSwal } from './utility/swalCall'
 
-function SelectModel(){
+function HomePage(){
 
     //let navigate = useNavigate();
     useEffect( () => {
@@ -23,4 +23,4 @@ function SelectModel(){
     );
 }
 
-export default SelectModel
+export default HomePage

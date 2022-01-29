@@ -64,7 +64,7 @@ function NavTop(){
                     <Image src={userData.photoURL} roundedCircle style={{ width: "25px"}}/> Hello {userData.displayName}  
                     </Nav.Link>
 
-                    <Nav.Link onClick={ () => { navigate('/home/index');} }> Setting <FaCog/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/drawBoard');} }> Draw Board <FaCog/> </Nav.Link>
 
                     <LogoutBtn format="text"/>    
                 </Nav>        
