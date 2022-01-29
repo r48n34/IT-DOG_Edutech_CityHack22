@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Table } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 //import { useNavigate } from "react-router-dom";
 
 import { basicCallSwal } from './utility/swalCall'
@@ -45,22 +45,7 @@ function TodayAttendentsChar(){
     )
 }
 
-
-
-
-function AssignmentAndNoticesBoard(){
-
-    const assignmentArray = [
-        { subject: "Chinese" , title:"book 2 exe p.18-9", principal:"Kenneth" },
-        { subject: "Chinese" , title:"Revision" , principal:"Kenneth"},
-        { subject: "Math" , title:"ws3 all" , principal:"開開"},
-    ];
-
-    const noticeArray = [
-        { types: "School notice" , title:"book 2 exe p.18-9", deadline:"30-01-2022" },
-        { types: "School notice" , title:"Revision" , deadline:"05-02-2022"},
-        { types: "Class notice" , title:"Wash hand and take care!!!" , deadline:" N/A"},
-    ]
+function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
 
     function TDGen({ data }){
         return data.map( (v, i) => (
@@ -88,24 +73,24 @@ function AssignmentAndNoticesBoard(){
 
     return(
         <Card>
-            <h2 style={{ marginLeft:"10px"}}> Today assignment:</h2>
+            <h2 style={{ marginLeft:"10px", marginTop:"8px"}}> Today assignment:</h2>
 
             <Table striped bordered hover >
                 <thead>
-                    <TRTopicGen data={assignmentArray} />
+                    <TRTopicGen data={assignmentData} />
                 </thead>
                 <tbody>
-                    <TDGen data={assignmentArray} />
+                    <TDGen data={assignmentData} />
                 </tbody>
             </Table>
 
             <h2 style={{ marginLeft:"10px"}}> Today notice:</h2>
             <Table striped bordered hover >
                 <thead>
-                    <TRTopicGen data={noticeArray} />
+                    <TRTopicGen data={noticeData} />
                 </thead>
                 <tbody>
-                    <TDGen data={noticeArray} />
+                    <TDGen data={noticeData} />
                 </tbody>
             </Table>
 
@@ -114,10 +99,24 @@ function AssignmentAndNoticesBoard(){
     )
 }
 
+const assignmentArray = [
+    { subject: "Chinese" , title:"book 2 exe p.18-9", principal:"Kenneth" },
+    { subject: "Chinese" , title:"Revision" , principal:"Kenneth"},
+    { subject: "Math" , title:"ws3 all" , principal:"開開"},
+];
+
+const noticeArray = [
+    { types: "School notice" , title:"book 2 exe p.18-9", deadline:"30-01-2022" },
+    { types: "School notice" , title:"Revision" , deadline:"05-02-2022"},
+    { types: "Class notice" , title:"Wash hand and take care!!!" , deadline:" N/A"},
+    { types: "Class notice" , title:"Career talk reminder" , deadline:" N/A"},
+]
 
 function HomePage(){
 
-    //let navigate = useNavigate();
+    const [assignmentData ,setAssignmentData] = useState(assignmentArray);
+    const [noticeData ,setNoticeData] = useState(noticeArray);
+
     useEffect( () => {
         basicCallSwal()
     },[])
@@ -135,7 +134,7 @@ function HomePage(){
                 </Col>
 
                 <Col md={6} lg={8}>
-                    <AssignmentAndNoticesBoard/>
+                    <AssignmentAndNoticesBoard assignmentData={assignmentData} noticeData={noticeData}/>
                 </Col>
             </Row>
 
