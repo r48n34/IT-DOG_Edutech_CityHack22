@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 
-import { FcGoogle } from 'react-icons/fc';
+import { FcGoogle, FcManager  } from 'react-icons/fc';
 import loginIcon from './img/loginIcon.svg';
 
 const LoginPage = () => {
@@ -39,12 +39,15 @@ const LoginPage = () => {
         <Container className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
             
           <div style={{ textAlign:"center"}}>
-            <h5 style={{ color: "white" }}><b>IT DOG 2022 - city hack 2022 present</b></h5>
+            <h5 style={{ color: "white" }}><b>IT DOG 2022 - CityHack 2022 present</b></h5>
             <h1 style={{ color: "white" }}><b>Welcome to Teaccess CMS</b></h1>
             <br/><br/>   
             <div><img src={loginIcon} className="Apps-logo" alt="a logo to show login" style={{ width:"60%"}} /></div>
             <br/><br/>   
-            <Button variant="light" className="button" onClick={() => signInWithGoogle()}>Login with Google <FcGoogle/> </Button> {" "}  
+            <Button variant="light" className="button" onClick={() => signInWithGoogle()}>Login with Google <FcGoogle/> </Button> {" "} 
+            <br/><br/>
+            <h5 style={{ color: "white" }}><b>Notice: Use your own google account, not need to register.</b></h5> 
+            <h5 style={{ color: "white" }}><b>Login is powered by Firebase Authentication <FcManager/> </b></h5> 
           </div>
   
         </Container>
