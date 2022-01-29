@@ -6,7 +6,7 @@ const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     userData: {},
-    userSetting: {}, // temp use for futurn user setting
+    userSetting: {}, // temp use for further user setting
     noticesData: getLocalStoreArr("noticesData")
   },
   reducers: {
