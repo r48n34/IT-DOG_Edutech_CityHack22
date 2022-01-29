@@ -1,6 +1,6 @@
 # CityHack22 Project Submission
 ## Project: Teaccess
-<img src="assets/doge.jpg" width="200" alt="project_logo"/>
+<img src="assets/ch2022logo.png" width="400" alt="project_logo"/>
 
 ## Team: IT DOG
 ## Members
@@ -9,7 +9,10 @@
 - Ko Man Yeung 
 - Lee Kam Hung 
 
-## Description of the Project (300 words)
+# Project site
+https://vibrant-jones-fe1b53.netlify.app/
+
+# Description of the Project (300 words)
 
 ### Aims for teacher, best for lecture.
 
