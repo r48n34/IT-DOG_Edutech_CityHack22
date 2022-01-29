@@ -1,0 +1,21 @@
+# dependencies
+Frontendv2/my-app/node_modules
+Frontendv2/my-app/.pnp
+Frontendv2/my-app/.pnp.js
+
+# testing
+Frontendv2/my-app/coverage
+
+# production
+Frontendv2/my-app/build
+
+# misc
+Frontendv2/my-app/.DS_Store
+Frontendv2/my-app/.env.local
+Frontendv2/my-app/.env.development.local
+Frontendv2/my-app/.env.test.local
+Frontendv2/my-app/.env.production.local
+
+Frontendv2/my-app/npm-debug.log*
+Frontendv2/my-app/yarn-debug.log*
+Frontendv2/my-app/yarn-error.log*
