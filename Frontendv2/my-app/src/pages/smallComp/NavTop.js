@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setUserData } from '../redux/counterSlice'
 
 import LogoutBtn from "./LogoutBtn"
-import { FaDog, FaCog  } from 'react-icons/fa'; //FaGhost
+import { FaDog, FaChalkboard } from 'react-icons/fa'; //FaGhost
 import '../css/navTopcss.css';
 
 function NavTop(){
@@ -64,7 +64,8 @@ function NavTop(){
                     <Image src={userData.photoURL} roundedCircle style={{ width: "25px"}}/> Hello {userData.displayName}  
                     </Nav.Link>
 
-                    <Nav.Link onClick={ () => { navigate('/home/drawBoard');} }> Draw Board <FaCog/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/drawBoard');} }> Draw Board <FaChalkboard/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/portalpage');} }> Portal <FaChalkboard/> </Nav.Link>
 
                     <LogoutBtn format="text"/>    
                 </Nav>        

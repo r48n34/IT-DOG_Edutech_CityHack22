@@ -11,6 +11,8 @@
 
 ## Description of the Project (300 words)
 
+### Aims for teacher, best for lecture.
+
 ## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
 1. < First Feature >
 2. < Second Feature >
@@ -23,6 +25,7 @@
 - react-router-dom-v6 ( Yeah we are using v6 not v5 / 4)
 - React bootstrap (css framework)
 - sweetalert2-react-content (pop alert library)
+- @tldraw/core & @tldraw/tldraw (Drawing library)
 
 2. Services ( serverless base )
 - Firebase Authentication with google account  
