@@ -54,15 +54,19 @@ function AssignmentAndNoticesBoard(){
         { subject: "Chinese" , title:"book 2 exe p.18-9", principal:"Kenneth" },
         { subject: "Chinese" , title:"Revision" , principal:"Kenneth"},
         { subject: "Math" , title:"ws3 all" , principal:"開開"},
+    ];
+
+    const noticeArray = [
+        { types: "School notice" , title:"book 2 exe p.18-9", deadline:"30-01-2022" },
+        { types: "School notice" , title:"Revision" , deadline:"05-02-2022"},
+        { types: "Class notice" , title:"Wash hand and take care!!!" , deadline:" N/A"},
     ]
 
     function TDGen({ data }){
         return data.map( (v, i) => (
-            <tr>
+            <tr key={i}>
             <td>{i + 1}</td>
-            <td>{v.subject}</td>
-            <td>{v.title}</td>
-            <td>{v.principal}</td>
+            { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i}>{v[keyName]}</td> )) }
             </tr>
         ))
     }
@@ -71,13 +75,13 @@ function AssignmentAndNoticesBoard(){
         const heading = []
 
         for (let i in data[0]){
-            heading.push(<th>{i}</th>)
+            heading.push(<th key={i}>{i}</th>)
         }
 
         return(
             <tr>
             <th>No. </th>
-            {heading.map(v => <th>{v}</th>)}
+            {heading.map( (v,i) => v )}
             </tr>
         )
     }
@@ -85,14 +89,26 @@ function AssignmentAndNoticesBoard(){
     return(
         <Card>
             <h2 style={{ marginLeft:"10px"}}> Today assignment:</h2>
+
             <Table striped bordered hover >
-            <thead>
-                <TRTopicGen data={assignmentArray} />
-            </thead>
-            <tbody>
-                <TDGen data={assignmentArray} />
-            </tbody>
+                <thead>
+                    <TRTopicGen data={assignmentArray} />
+                </thead>
+                <tbody>
+                    <TDGen data={assignmentArray} />
+                </tbody>
             </Table>
+
+            <h2 style={{ marginLeft:"10px"}}> Today notice:</h2>
+            <Table striped bordered hover >
+                <thead>
+                    <TRTopicGen data={noticeArray} />
+                </thead>
+                <tbody>
+                    <TDGen data={noticeArray} />
+                </tbody>
+            </Table>
+
 
         </Card>
     )
