@@ -3,9 +3,9 @@
 <img src="../assets/logo1.png" width="200" alt="project_logo"/>
 
 < Replace the logo above with Your Project Logo >
-## Team: < Your Team Name >
+## Team: IT DOG
 ## Members
-- < Team Member 1 > (Leader)
+- Ng Chun Hei (Leader)
 - < Team Member 2 >
 - < Team Member 3 >
 - < Team Member 4 >
@@ -18,11 +18,20 @@
 2. < Second Feature >
 3. < Third Feature >
 
-## Tech used (as many as required)
-1. < Tech >
-2. < Tech >
-3. < Tech >
-4. < Tech >
+## Tech used
+1. Front End
+- React  
+- Redux (Recoil is better btw)
+- react-router-dom-v6 ( Yeah we are using v6 not v5 / 4)
+- React bootstrap (css framework)
+- sweetalert2-react-content (pop alert library)
+
+2. Services ( serverless base )
+- Firebase Authentication with google account  
+
+3. Deployment & CI/CD
+- Netlify (static web)  
+
 
 ## Link
 - < 3 minute Youtube Video Link for Project Demo >
