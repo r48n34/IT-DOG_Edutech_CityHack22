@@ -21,8 +21,13 @@ const counterSlice = createSlice({
       console.log(state.noticesData);
       setArrToLocalStore("noticesData", state.noticesData);
     },
+    addOneNoticesData: (state, action) => {
+      action.payload.forEach( v => state.noticesData.push(v) );
+      console.log(state.noticesData);
+      setArrToLocalStore("noticesData", action.payload);
+    },
   }
 })
 
-export const { setUserData, setUserSetting, addNoticesData } = counterSlice.actions
+export const { setUserData, setUserSetting, addNoticesData, addOneNoticesData } = counterSlice.actions
 export default counterSlice.reducer

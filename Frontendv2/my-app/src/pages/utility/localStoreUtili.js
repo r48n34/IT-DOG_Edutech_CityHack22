@@ -7,8 +7,12 @@ function setArrToLocalStore( keyName, obj ){
         localStorage.setItem(keyName,temp)
     }
     else{
-        oblObj.push(obj)
-        let temp = JSON.stringify(oblObj)
+        let temp = JSON.parse(oblObj)
+        console.log(temp);
+        console.log(obj);
+        temp.push(...obj)
+
+        temp = JSON.stringify(temp)
         localStorage.setItem(keyName,temp)
     }
 

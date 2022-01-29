@@ -1,11 +1,11 @@
-import { Container, Row, Col, Card, Table } from "react-bootstrap";
+import { Container, Row, Col, Card, Table, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 //import { useNavigate } from "react-router-dom"
 
 import { useDispatch, useSelector } from 'react-redux'
-import { addNoticesData } from './redux/counterSlice';
+import { addNoticesData, addOneNoticesData } from './redux/counterSlice';
 
-import { basicCallSwal } from './utility/swalCall'
+import { basicCallSwal, addClassEventSwal } from './utility/swalCall'
 import moment from 'moment'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
@@ -13,7 +13,6 @@ import { Doughnut } from 'react-chartjs-2';
 import { getLocalStoreArr } from './utility/localStoreUtili'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
 
 function TodayAttendentsChar(){
 
@@ -46,62 +45,6 @@ function TodayAttendentsChar(){
             <Card.Title style={{ textAlign:"center", paddingTop:"8px" }}> Today ({ moment().format() }) {classCurrent} attendents: </Card.Title>
             <Doughnut data={data}/> 
             <br/>
-        </Card>
-    )
-}
-
-function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
-
-    function TDGen({ data }){
-        return data.map( (v, i) => (
-            <tr key={i}>
-            <td>{i + 1}</td>
-            { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i2}>{v[keyName]}</td> )) }
-            </tr>
-        ))
-    }
-
-    function TRTopicGen({ data }){
-        const heading = []
-
-        for (let i in data[0]){
-            heading.push(<th key={i}>{i}</th>)
-        }
-
-        return(
-            <tr>
-            <th>No. </th>
-            {heading.map( (v,i) => v )}
-            </tr>
-        )
-    }
-
-    return(
-        <Card>
-
-            <h2 style={{ marginLeft:"10px", marginTop:"8px"}}> Today assignment:</h2>
-            <Table striped bordered hover >
-                <thead>
-                    <TRTopicGen data={assignmentData} />
-                </thead>
-                <tbody>
-                    <TDGen data={assignmentData} />
-                </tbody>
-            </Table>
-
-            <h2 style={{ marginLeft:"10px"}}> Today notice:</h2>
-            <Table striped bordered hover >
-                <thead>
-                    <TRTopicGen data={noticeData} />
-                </thead>
-                <tbody>
-                    <TDGen data={noticeData} />
-                </tbody>
-            </Table>
-
-            
-
-
         </Card>
     )
 }
@@ -140,6 +83,70 @@ function HomePage(){
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
+
+    function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
+
+        function TDGen({ data }){
+            return data.map( (v, i) => (
+                <tr key={i}>
+                <td>{i + 1}</td>
+                { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i2}>{v[keyName]}</td> )) }
+                </tr>
+            ))
+        }
+    
+        function TRTopicGen({ data }){
+            const heading = []
+    
+            for (let i in data[0]){
+                heading.push(<th key={i}>{i}</th>)
+            }
+    
+            return(
+                <tr>
+                <th>No. </th>
+                {heading.map( (v,i) => v )}
+                </tr>
+            )
+        }
+    
+        return(
+            <Card>
+    
+                <h2 style={{ marginLeft:"10px", marginTop:"8px"}}> Today assignment:</h2>
+                <Table striped bordered hover >
+                    <thead>
+                        <TRTopicGen data={assignmentData} />
+                    </thead>
+                    <tbody>
+                        <TDGen data={assignmentData} />
+                    </tbody>
+                </Table>
+    
+                <h2 style={{ marginLeft:"10px"}}> Today notice:</h2>
+                <Table striped bordered hover >
+                    <thead>
+                        <TRTopicGen data={noticeData} />
+                    </thead>
+                    <tbody>
+                        <TDGen data={noticeData} />
+                    </tbody>
+                </Table>
+    
+                <Button variant="dark" onClick={ async () => { 
+                    let val = await addClassEventSwal();
+
+                    if(val){
+                        dispatch( addOneNoticesData([{ types: val[0] , title: val[1], deadline: val[2] }]) )
+                    }
+                    
+                    
+                }}>Add class event</Button>
+    
+    
+            </Card>
+        )
+    }
 
     return(
         <div> 

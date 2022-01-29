@@ -21,4 +21,51 @@ function logoutErrorSwal(){
     })
 }
 
-export { basicCallSwal, logoutErrorSwal }
+
+async function addClassEventSwal(){
+    const { value: formValues } = await MySwal.fire({
+        title: 'Multiple inputs',
+        html:`
+          <label>Types:</label>
+          <input id="sw1" class="swal2-input" value="Class notice">
+          <br>
+
+          <label>Title:</label>
+          <input id="sw2" class="swal2-input">
+          <br>
+
+          <label>Deadline:</label>
+          <input id="sw3" class="swal2-input">
+          `,
+        focusConfirm: false,
+        preConfirm: () => {
+          return [
+            document.getElementById('sw1').value,
+            document.getElementById('sw2').value,
+            document.getElementById('sw3').value
+          ]
+        }
+    })
+      
+    if (formValues) {
+        console.log(formValues);
+
+        if(!formValues[0] || !formValues[1] || !formValues[2]){
+
+            MySwal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You need to input all the input box!',
+            })
+
+            return;
+        }
+        else{
+            return formValues
+        }
+
+    }
+
+}
+
+export { basicCallSwal, logoutErrorSwal, addClassEventSwal }
