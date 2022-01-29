@@ -15,7 +15,7 @@ function WebsitePortalList({ data, sortStr , fillStr }){
     data = fillStr ? [...data].filter( v => v.title.toLowerCase().includes(fillStr.toLowerCase()) ) : [...data];
 
     return data.map( (v,i) => (
-        <Col md={4} lg={3} style={{ marginBottom:"20px"}}>
+        <Col md={4} lg={3} style={{ marginBottom:"20px"}} key={v.title + i}>
             <Card>
 
             <Card.Header> {v.types} </Card.Header>

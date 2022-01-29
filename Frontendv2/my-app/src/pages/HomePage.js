@@ -21,7 +21,7 @@ function TodayAttendentsChar(){
 
     const attendNum = 30;
     const absentNum = 2;
-    const classCurrent = "3A"
+    const classCurrent = "6A"
     
     const data = {
         labels: ['Absent', 'Attend'],
@@ -61,7 +61,7 @@ const assignmentArray = [
 const noticeArray = [
     { types: "School notice" , title:"School holiday", deadline:"30-01-2022" },
     { types: "School notice" , title:"Cov-19 notices" , deadline:"05-02-2022"},
-    { types: "EDB notice" , title:"CIRCULAR MEMORANDUM NO. 1/2022" , deadline:"05-02-2022"},
+    { types: "EDB notice" , title:"CIRCULAR MEMORANDUM NO. 1/2022" , deadline:"08-02-2022"},
     { types: "Class notice" , title:"Wash hand and take care!!!" , deadline:" N/A"},
     { types: "Class notice" , title:"Career talk reminder" , deadline:" N/A"},
 ]
@@ -70,8 +70,6 @@ function HomePage(){
 
     // eslint-disable-next-line no-unused-vars
     const [assignmentData ,setAssignmentData] = useState(assignmentArray);
-    // const [noticeData , setNoticeData] = useState(noticeArray);
-    
 
     const noticeData = useSelector( (state) => state.counter.noticesData);
     const userData = useSelector( (state) => state.counter.userData);
@@ -79,12 +77,11 @@ function HomePage(){
     const dispatch = useDispatch();
 
     useEffect( () => {
-        basicCallSwal();
+        basicCallSwal( userData.displayName );
 
         let a = getLocalStoreArr("noticesData");
 
         if(a.length === 0){
-            console.log(123123);
             dispatch( addNoticesData(noticeArray) );
         }      
 

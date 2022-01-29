@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card  } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { useState } from "react";
 
 import FullCalendar from '@fullcalendar/react'
