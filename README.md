@@ -40,6 +40,12 @@
 ### 4. Design images references 
 - unDraw [https://undraw.co/]
 
+### 4. Others data
+- Chinese name generator data come from  
+香港熱門中文名字排行榜: [https://www.namechef.co/zh/popular-chinese-names/hong-kong/]  
+百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
+
+
 
 ## Link
 - < 3 minute Youtube Video Link for Project Demo >
