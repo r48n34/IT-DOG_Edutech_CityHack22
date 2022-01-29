@@ -1,15 +1,13 @@
 # CityHack22 Project Submission
 ## Project: < Your CityHack22 Project Name >
-<img src="../assets/logo1.png" width="200" alt="project_logo"/>
+<img src="assets/doge.jpg" width="200" alt="project_logo"/>
 
-< Replace the logo above with Your Project Logo >
 ## Team: IT DOG
 ## Members
 - Ng Chun Hei (Leader)
-- < Team Member 2 >
-- < Team Member 3 >
-- < Team Member 4 >
-- < Team Member 5 >
+- Hui Ka Fai
+- Ko Man Yeung
+- Lee Kam Hung
 
 ## Description of the Project (300 words)
 
