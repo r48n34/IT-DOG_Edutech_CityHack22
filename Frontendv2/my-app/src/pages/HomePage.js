@@ -1,11 +1,16 @@
 import { Container, Row, Col, Card, Table } from "react-bootstrap";
 import { useEffect, useState } from "react";
-//import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom"
+
+import { useDispatch, useSelector } from 'react-redux'
+import { addNoticesData } from './redux/counterSlice';
 
 import { basicCallSwal } from './utility/swalCall'
 import moment from 'moment'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+
+import { getLocalStoreArr } from './utility/localStoreUtili'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -51,7 +56,7 @@ function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
         return data.map( (v, i) => (
             <tr key={i}>
             <td>{i + 1}</td>
-            { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i}>{v[keyName]}</td> )) }
+            { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i2}>{v[keyName]}</td> )) }
             </tr>
         ))
     }
@@ -73,8 +78,8 @@ function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
 
     return(
         <Card>
-            <h2 style={{ marginLeft:"10px", marginTop:"8px"}}> Today assignment:</h2>
 
+            <h2 style={{ marginLeft:"10px", marginTop:"8px"}}> Today assignment:</h2>
             <Table striped bordered hover >
                 <thead>
                     <TRTopicGen data={assignmentData} />
@@ -94,6 +99,8 @@ function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
                 </tbody>
             </Table>
 
+            
+
 
         </Card>
     )
@@ -106,8 +113,9 @@ const assignmentArray = [
 ];
 
 const noticeArray = [
-    { types: "School notice" , title:"book 2 exe p.18-9", deadline:"30-01-2022" },
-    { types: "School notice" , title:"Revision" , deadline:"05-02-2022"},
+    { types: "School notice" , title:"School holiday", deadline:"30-01-2022" },
+    { types: "School notice" , title:"Cov-19 notices" , deadline:"05-02-2022"},
+    { types: "EDB notice" , title:"CIRCULAR MEMORANDUM NO. 1/2022" , deadline:"05-02-2022"},
     { types: "Class notice" , title:"Wash hand and take care!!!" , deadline:" N/A"},
     { types: "Class notice" , title:"Career talk reminder" , deadline:" N/A"},
 ]
@@ -115,10 +123,22 @@ const noticeArray = [
 function HomePage(){
 
     const [assignmentData ,setAssignmentData] = useState(assignmentArray);
-    const [noticeData ,setNoticeData] = useState(noticeArray);
+    // const [noticeData , setNoticeData] = useState(noticeArray);
+
+    const noticeData = useSelector( (state) => state.counter.noticesData);
+    const dispatch = useDispatch();
 
     useEffect( () => {
-        basicCallSwal()
+        basicCallSwal();
+
+        let a = getLocalStoreArr("noticesData");
+
+        if(a.length === 0){
+            console.log(123123);
+            dispatch( addNoticesData(noticeArray) );
+        }      
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return(
