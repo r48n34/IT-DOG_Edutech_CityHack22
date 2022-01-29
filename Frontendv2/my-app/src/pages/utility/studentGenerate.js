@@ -23,7 +23,7 @@ function generateStudentArry(num){
         if(!lastname){
             lastname = "開開";
         }
-        
+
         let firstname = lastName100aRR.nameStr[ Math.floor( Math.random() * lastName100aRR.nameStr.length) - 1 ];
 
         arr.push({ 
@@ -31,7 +31,8 @@ function generateStudentArry(num){
             chineseName: firstname + lastname, 
             gender: gender,
             classNo: i + 1,
-            society: Math.random() >= 0.5 ? "Red" : "Purple"
+            society: Math.random() >= 0.5 ? "Red" : "Purple",
+            attendents: Math.random() >= 0.9 ? "X" : "O",
         })
     }
 
