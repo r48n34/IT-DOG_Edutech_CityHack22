@@ -24,6 +24,7 @@
 - Redux (Recoil is better btw)
 - react-router-dom-v6 ( Yeah we are using v6 not v5 / 4)
 - React bootstrap (css framework)
+- react-icons (All icon display)
 - sweetalert2-react-content (pop alert library)
 - @tldraw/core & @tldraw/tldraw (Drawing library)
 
@@ -32,6 +33,9 @@
 
 3. Deployment & CI/CD
 - Netlify (static web)  
+
+4. Design images references 
+- unDraw [https://undraw.co/]
 
 
 ## Link

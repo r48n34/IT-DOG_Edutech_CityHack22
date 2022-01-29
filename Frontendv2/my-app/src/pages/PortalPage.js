@@ -3,25 +3,30 @@ import { useEffect } from "react";
 //import { useNavigate } from "react-router-dom";
 
 const dataArr = [
-    { title: 'Kahoot', url: "https://kahoot.it/" , desc:"Online game-based learning platform."},
-    { title: 'Google Classroom', url: "https://classroom.google.com/" , desc:"Free blended learning platform."},
-    { title: 'eClass', url: "https://www.eclass.com.hk/" , desc:"Complete and feature-rich online learning platform."},
-    { title: 'Microsoft Teams', url: "https://www.microsoft.com/zh-hk/microsoft-teams/log-in" , desc:"Proprietary business communication platform."},
-    { title: 'Zoom', url: "https://zoom.us/" , desc:"Zoom's secure, reliable video platform."},
+    { title: 'Kahoot', url: "https://kahoot.it/" , desc:"Online game-based learning platform.", types: "Game"},
+    { title: 'Google Classroom', url: "https://classroom.google.com/" , desc:"Free blended learning platform." , types: "Management"},
+    { title: 'eClass', url: "https://www.eclass.com.hk/" , desc:"Complete and feature-rich online learning platform." , types: "Management"},
+    { title: 'Microsoft Teams', url: "https://www.microsoft.com/zh-hk/microsoft-teams/log-in" , desc:"Proprietary business communication platform." , types: "Live"},
+    { title: 'Zoom', url: "https://zoom.us/" , desc:"Zoom's secure, reliable video platform." , types: "Live"},
 ]
 
 function WebsitePortalList({ data }){
     return data.map( (v,i) => (
-        <Col md={4} lg={3}>
+        <Col md={4} lg={3} style={{ marginBottom:"20px"}}>
             <Card>
-            <Card.Header>Featured</Card.Header>
+
+            <Card.Header> {v.types} </Card.Header>
+
             <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
+                <Card.Title>{v.title}</Card.Title>
                 <Card.Text>
-                With supporting text below as a natural lead-in to additional content.
+                {v.desc}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <a href={v.url} target={"_blank"} rel="noreferrer">
+                    <Button variant="primary">Go</Button>
+                </a>
             </Card.Body>
+
             </Card>
         </Col>
 
