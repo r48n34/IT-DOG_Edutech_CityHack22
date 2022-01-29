@@ -15,7 +15,7 @@
 
 ## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
 1. Full online class Management 
-2. Teaching tools for better teaching experiences
+2. Teaching tools for better teaching experiences (For teachers)
 3. Web base, no need to install (PWA support)
 
 ## Tech used
@@ -45,8 +45,6 @@
 - Chinese name generator data come from  
 香港熱門中文名字排行榜: [https://www.namechef.co/zh/popular-chinese-names/hong-kong/]  
 百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
-
-
 
 ## Link
 - < 3 minute Youtube Video Link for Project Demo >
