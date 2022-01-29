@@ -1,9 +1,9 @@
-import { Container, Card, Table } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 
 import FullCalendar from '@fullcalendar/react'
 import timeGridPlugin from '@fullcalendar/timegrid';
 
-import { useEffect } from "react";
+//import { useEffect } from "react";
 
 const dateEvent = [
     { title: '4B Chinese lessons', start: '2022-01-31T10:00:00', end: '2022-01-31T13:00:00', description: 'Lecture' },
