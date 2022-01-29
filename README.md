@@ -14,9 +14,9 @@
 ### Aims for teacher, best for lecture.
 
 ## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
-1. < First Feature >
-2. < Second Feature >
-3. < Third Feature >
+1. Full online class Management 
+2. Teaching tools for better teaching experiences
+3. Web base, no need to install (PWA support)
 
 ## Tech used
 1. Front End
