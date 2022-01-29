@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setUserData } from '../redux/counterSlice'
 
 import LogoutBtn from "./LogoutBtn"
-import { FaChalkboard, FaDoorClosed } from 'react-icons/fa'; //FaGhost
+import { FaChalkboard, FaDoorClosed, FaYoutube } from 'react-icons/fa'; //FaGhost
 import '../css/navTopcss.css';
 
 function NavTop(){
@@ -66,6 +66,7 @@ function NavTop(){
 
                     <Nav.Link onClick={ () => { navigate('/home/drawBoard');} }> Draw Board <FaChalkboard/> </Nav.Link>
                     <Nav.Link onClick={ () => { navigate('/home/portalpage');} }> Portal <FaDoorClosed/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/classtv');} }> Class TV <FaYoutube/> </Nav.Link>
 
                     <LogoutBtn format="text"/>    
                 </Nav>        
