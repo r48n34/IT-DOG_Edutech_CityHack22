@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setUserData } from '../redux/counterSlice'
 
 import LogoutBtn from "./LogoutBtn"
-import { FaDog, FaChalkboard, FaDoorClosed } from 'react-icons/fa'; //FaGhost
+import { FaChalkboard, FaDoorClosed } from 'react-icons/fa'; //FaGhost
 import '../css/navTopcss.css';
 
 function NavTop(){
@@ -53,7 +53,7 @@ function NavTop(){
         <Container fluid={true}>
 
             <Navbar.Brand onClick={ () => { navigate('/home/index');} } className="brandLogo">
-                <b>IT DOG - City hack 2022</b> <FaDog/>
+                <b>Teaccess</b> 
             </Navbar.Brand>
 
             <Navbar.Toggle />

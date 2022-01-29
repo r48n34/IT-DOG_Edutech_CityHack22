@@ -5,9 +5,9 @@
 ## Team: IT DOG
 ## Members
 - Ng Chun Hei (Leader)
-- Hui Ka Fai
-- Ko Man Yeung
-- Lee Kam Hung
+- Hui Ka Fai 
+- Ko Man Yeung 
+- Lee Kam Hung 
 
 ## Description of the Project (300 words)
 

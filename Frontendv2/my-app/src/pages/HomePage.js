@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Table } from "react-bootstrap";
 import { useEffect } from "react";
 //import { useNavigate } from "react-router-dom";
 
@@ -6,7 +6,6 @@ import { basicCallSwal } from './utility/swalCall'
 import moment from 'moment'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -48,6 +47,58 @@ function TodayAttendentsChar(){
 
 
 
+
+function AssignmentAndNoticesBoard(){
+
+    const assignmentArray = [
+        { subject: "Chinese" , title:"book 2 exe p.18-9", principal:"Kenneth" },
+        { subject: "Chinese" , title:"Revision" , principal:"Kenneth"},
+        { subject: "Math" , title:"ws3 all" , principal:"開開"},
+    ]
+
+    function TDGen({ data }){
+        return data.map( (v, i) => (
+            <tr>
+            <td>{i + 1}</td>
+            <td>{v.subject}</td>
+            <td>{v.title}</td>
+            <td>{v.principal}</td>
+            </tr>
+        ))
+    }
+
+    function TRTopicGen({ data }){
+        const heading = []
+
+        for (let i in data[0]){
+            heading.push(<th>{i}</th>)
+        }
+
+        return(
+            <tr>
+            <th>No. </th>
+            {heading.map(v => <th>{v}</th>)}
+            </tr>
+        )
+    }
+
+    return(
+        <Card>
+            <h2 style={{ marginLeft:"10px"}}> Today assignment:</h2>
+            <Table striped bordered hover >
+            <thead>
+                <TRTopicGen data={assignmentArray} />
+            </thead>
+            <tbody>
+                <TDGen data={assignmentArray} />
+            </tbody>
+            </Table>
+
+        </Card>
+    )
+}
+
+
 function HomePage(){
 
     //let navigate = useNavigate();
@@ -68,11 +119,9 @@ function HomePage(){
                 </Col>
 
                 <Col md={6} lg={8}>
-                    <TodayAttendentsChar/>
+                    <AssignmentAndNoticesBoard/>
                 </Col>
-
             </Row>
-
 
         </Container>
 
