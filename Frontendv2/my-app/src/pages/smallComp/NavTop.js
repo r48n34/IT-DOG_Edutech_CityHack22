@@ -60,13 +60,13 @@ function NavTop(){
             <Navbar.Collapse className="justify-content-end">
 
                 <Nav>
-                    <Nav.Link onClick={ () => { navigate('/home/index');} }> 
+                    <Nav.Link onClick={ () => { navigate('/home/setting');} }> 
                     <Image src={userData.photoURL} roundedCircle style={{ width: "25px"}}/> Hello {userData.displayName}  
                     </Nav.Link>
 
-                    <Nav.Link onClick={ () => { navigate('/home/drawBoard');} }> Draw Board <FaChalkboard/> </Nav.Link>
-                    <Nav.Link onClick={ () => { navigate('/home/portalpage');} }> Portal <FaDoorClosed/> </Nav.Link>
-                    <Nav.Link onClick={ () => { navigate('/home/classtv');} }> Class TV <FaYoutube/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/drawBoard'); }}> Draw Board <FaChalkboard/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/portalpage'); }}> Portal <FaDoorClosed/> </Nav.Link>
+                    <Nav.Link onClick={ () => { navigate('/home/classtv'); }}> Class TV <FaYoutube/> </Nav.Link>
 
                     <LogoutBtn format="text"/>    
                 </Nav>        

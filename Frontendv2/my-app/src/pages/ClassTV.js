@@ -7,19 +7,32 @@ const opts = {
     height: '390',
     width: '640',
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
+      autoplay: 0,
     },
 };
 
 function ClassTV(){
+
+    const [currentVdoId, setCurrentVdoId] = useState("2g811Eo7K8U")
+
+
     return(
         <div> 
         <br/><br/><br/>
         
         <Container fluid style={{ backgroundColor:"#282c34" }}>
 
-            <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={ (e) => e.target.pauseVideo()} />
+            <Row>
+                <Col md={4} lg={4}>
+                </Col>
+
+                <Col md={8} lg={8}>
+                    <YouTube videoId={currentVdoId} opts={opts} onReady={ (e) => e.target.pauseVideo()} />
+
+                </Col>
+            </Row>
+
+            
  
         </Container>
 

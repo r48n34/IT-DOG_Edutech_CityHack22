@@ -10,6 +10,9 @@ import moment from 'moment'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
+import TDGen from './smallComp/TDGen'
+import TRTopicGen from './smallComp/TRTopicGen'
+
 import { getLocalStoreArr } from './utility/localStoreUtili'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -65,10 +68,14 @@ const noticeArray = [
 
 function HomePage(){
 
+    // eslint-disable-next-line no-unused-vars
     const [assignmentData ,setAssignmentData] = useState(assignmentArray);
     // const [noticeData , setNoticeData] = useState(noticeArray);
+    
 
     const noticeData = useSelector( (state) => state.counter.noticesData);
+    const userData = useSelector( (state) => state.counter.userData);
+
     const dispatch = useDispatch();
 
     useEffect( () => {
@@ -86,30 +93,6 @@ function HomePage(){
 
     function AssignmentAndNoticesBoard({ assignmentData , noticeData }){
 
-        function TDGen({ data }){
-            return data.map( (v, i) => (
-                <tr key={i}>
-                <td>{i + 1}</td>
-                { Object.keys(v).map((keyName, i2) => ( <td key={v[keyName] + i2}>{v[keyName]}</td> )) }
-                </tr>
-            ))
-        }
-    
-        function TRTopicGen({ data }){
-            const heading = []
-    
-            for (let i in data[0]){
-                heading.push(<th key={i}>{i}</th>)
-            }
-    
-            return(
-                <tr>
-                <th>No. </th>
-                {heading.map( (v,i) => v )}
-                </tr>
-            )
-        }
-    
         return(
             <Card>
     
@@ -153,7 +136,7 @@ function HomePage(){
         <br/><br/><br/>
         
         <Container fluid style={{ backgroundColor:"#282c34" }}>
-            <h1 style={{ color:"white" }}>Teacher Dashboard</h1>
+            <h1 style={{ color:"white" }}>Teacher Dashboard ( {userData.displayName} ) (Class 6A)</h1>
 
             <Row>
                 <Col md={6} lg={4}>

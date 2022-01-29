@@ -9,6 +9,7 @@ import { FcGoogle } from 'react-icons/fc';
 import loginIcon from './img/loginIcon.svg';
 
 const LoginPage = () => {
+    // eslint-disable-next-line no-unused-vars
     const [user, setUser] = useState(false);
     let navigate = useNavigate();
   

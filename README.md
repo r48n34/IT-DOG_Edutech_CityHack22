@@ -19,7 +19,7 @@
 3. Web base, no need to install (PWA support)
 
 ## Tech used
-1. Front End
+### 1. Front End
 - React  
 - Redux (Recoil is better btw)
 - react-router-dom-v6 ( Yeah we are using v6 not v5 / 4)
@@ -31,13 +31,13 @@
 - moment.js (Time formal library)
 - react-youtube (Boardcasting month / week / morning school meeting)
 
-2. Services ( serverless base )
+### 2. Services ( serverless base )
 - Firebase Authentication with google account  
 
-3. Deployment & CI/CD
+### 3. Deployment & CI/CD
 - Netlify (static web)  
 
-4. Design images references 
+### 4. Design images references 
 - unDraw [https://undraw.co/]
 
 
