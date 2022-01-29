@@ -40,7 +40,7 @@ const LoginPage = () => {
             
           <div style={{ textAlign:"center"}}>
             <h5 style={{ color: "white" }}><b>IT DOG 2022 - city hack 2022 present</b></h5>
-            <h1 style={{ color: "white" }}><b>Welcome to smart CMS</b></h1>
+            <h1 style={{ color: "white" }}><b>Welcome to Teaccess CMS</b></h1>
             <br/><br/>   
             <div><img src={loginIcon} className="Apps-logo" alt="a logo to show login" style={{ width:"60%"}} /></div>
             <br/><br/>   

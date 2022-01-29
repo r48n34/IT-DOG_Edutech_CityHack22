@@ -1,5 +1,5 @@
-import { Container, Row, Col, Card, Button, Table } from "react-bootstrap";
-import { useSelector, useDispatch } from 'react-redux'
+import { Container, Card, Table } from "react-bootstrap";
+import { useSelector} from 'react-redux'
 
 import { useEffect, useState } from "react";
 import { generateStudentArry } from './utility/studentGenerate'
@@ -17,7 +17,6 @@ function SettingPage(){
     useEffect( () => {
         setStudentData( generateStudentArry(30) )
     },[])
-
 
     return(
         <div> 
@@ -41,8 +40,6 @@ function SettingPage(){
                     </tbody>
                 </Table>
             </Card>
-
-
 
         </Container>
 
