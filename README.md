@@ -1,13 +1,12 @@
 # CityHack22 Project Submission
-## Project: Teaccess
+## Project: Teaccess ( IT DOG )
 <img src="assets/ch2022logo.png" width="400" alt="project_logo"/>
 
-## Team: IT DOG
 ## Members
-- [reemo](https://github.com/r48n34)
-- [komarcus](https://github.com/komarcus)
-- [hhui0921](https://github.com/hhui0921)
-- [invalidname1911](https://github.com/invalidname1911)
+- [reemo - CityU EE](https://github.com/r48n34)
+- [komarcus - PolyU COMP](https://github.com/komarcus)
+- [hhui0921 - CityU MNE](https://github.com/hhui0921)
+- [invalidname1911 - PolyU COMP](https://github.com/invalidname1911)
 
 # Project site
 https://vibrant-jones-fe1b53.netlify.app/
