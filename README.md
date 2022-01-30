@@ -71,16 +71,8 @@ for explain their class content and daily school informations.
 - react-youtube (Boardcasting month / week / morning school meeting)
 - fullcalendar-react (TimeTable library) with timegrid & daygrid
 
-- Further development:  
-Use Recoil / react query instead of Redux   
-Use next.js instead of react  
-SEO enhancement  
-
 ## 2. Services ( serverless base )
 - Firebase Authentication with google account  
-
-- Further development:   
-Using Firebase firestore or dynamobd / mongodb
 
 ## 3. Deployment & CI/CD
 - Netlify  
@@ -95,5 +87,4 @@ Using Firebase firestore or dynamobd / mongodb
 百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
 
 # Link
-- PPT pdf: in assets/itdogch2022ppt.pdf
 - https://youtu.be/dz0ZgZrbxTs
