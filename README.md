@@ -51,10 +51,11 @@ for explain their class content and daily school informations.
 - No need to open a lot of software and remember all steps. just one platform.  
 
 3. Web base, no need to install (PWA support)  
-<img src="assets/pwa.jpg" width="600" alt="project_logo"/>   
-- Access everywhere, anywhere with phones.    
-- No need to install in your pc, just access the internet.  
-- Mobile responsive  
+<img src="assets/pwa.jpg" width="600" alt="project_logo"/> 
+  
+- Access everywhere, anywhere with phones.     
+- No need to install in your pc, just access the internet.   
+- Mobile responsive    
 
 # Tech used
 ## 1. Front End
