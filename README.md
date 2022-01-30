@@ -86,4 +86,4 @@ for explain their class content and daily school informations.
 
 # Link
 - PPT pdf: in assets/itdogch2022ppt.pdf
-- < 3 minute Youtube Video Link for Project Demo >
+- https://youtu.be/dz0ZgZrbxTs
