@@ -52,7 +52,7 @@ for explain their class content and daily school informations.
 
 3. Web base, no need to install (PWA support)  
 <img src="assets/pwa.jpg" width="600" alt="project_logo"/> 
-  
+
 - Access everywhere, anywhere with phones.     
 - No need to install in your pc, just access the internet.   
 - Mobile responsive    
@@ -72,9 +72,9 @@ for explain their class content and daily school informations.
 - fullcalendar-react (TimeTable library) with timegrid & daygrid
 
 - Further development:  
-Use Recoil / react query instead of Redux  
-Use next.js instead of react
-SEO enhancement
+Use Recoil / react query instead of Redux   
+Use next.js instead of react  
+SEO enhancement  
 
 ## 2. Services ( serverless base )
 - Firebase Authentication with google account  
