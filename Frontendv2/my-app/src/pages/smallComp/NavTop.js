@@ -21,7 +21,7 @@ function NavTop(){
         try{
             firebase.auth().onAuthStateChanged(async (userData) => {
 
-                if(userData !== null){
+                if(userData !== null){ // Login success
                     
                     dispatch( setUserData({
                         uid: userData._delegate.uid,
@@ -33,7 +33,7 @@ function NavTop(){
                     }));
 
                 }
-                else{
+                else{ //Login failed
                     navigate('/');
                     dispatch( setUserData({}) );
                 }

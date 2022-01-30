@@ -2,11 +2,11 @@ import firebase from 'firebase/compat/app';
 import { signInWithGoogle } from './services/firebaseUse';
 import { useState, useEffect } from 'react';
 
-import { useNavigate } from "react-router-dom";
-import { Container, Button } from "react-bootstrap";
-
 import { FcGoogle, FcManager  } from 'react-icons/fc';
 import loginIcon from './img/loginIcon.svg';
+
+import { useNavigate } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
 
 const LoginPage = () => {
     // eslint-disable-next-line no-unused-vars
@@ -17,13 +17,8 @@ const LoginPage = () => {
   
       try{
         firebase.auth().onAuthStateChanged( (userData) => {
-  
           setUser(userData);
-
-          if(userData != null){
-            navigate('/home/index');
-          }
-          
+          userData != null && navigate('/home/index');  
         });
       }
       catch(e){

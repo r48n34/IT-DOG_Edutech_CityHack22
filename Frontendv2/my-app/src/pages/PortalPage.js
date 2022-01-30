@@ -21,13 +21,16 @@ function WebsitePortalList({ data, sortStr , fillStr }){
             <Card.Header> {v.types} </Card.Header>
 
             <Card.Body>
-                <Card.Title>{v.title}</Card.Title>
+                <Card.Title> {v.title} </Card.Title>
+
                 <Card.Text>
                 {v.desc}
                 </Card.Text>
+
                 <a href={v.url} target={"_blank"} rel="noreferrer">
                     <Button variant="primary">Go</Button>
                 </a>
+
             </Card.Body>
 
             </Card>
@@ -38,7 +41,7 @@ function WebsitePortalList({ data, sortStr , fillStr }){
 
 function PortalPage(){
 
-    const [searchWord, setSearchWord] = useState("")
+    const [searchWord, setSearchWord] = useState("") // input box hook
 
     return(
         <div> 
@@ -56,7 +59,6 @@ function PortalPage(){
             <Row>
                 <WebsitePortalList data={dataArr} fillStr={searchWord}/>
             </Row>
-
 
         </Container>
 

@@ -79,12 +79,9 @@ function HomePage(){
     useEffect( () => {
         basicCallSwal( userData.displayName );
 
-        let a = getLocalStoreArr("noticesData");
-
-        if(a.length === 0){
-            dispatch( addNoticesData(noticeArray) );
-        }      
-
+        let nData = getLocalStoreArr("noticesData");
+        nData.length === 0 && dispatch( addNoticesData(noticeArray) );
+   
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
@@ -119,10 +116,8 @@ function HomePage(){
                     if(val){
                         dispatch( addOneNoticesData([{ types: val[0] , title: val[1], deadline: val[2] }]) )
                     }
-                    
-                    
+                       
                 }}>Add class event</Button>
-    
     
             </Card>
         )

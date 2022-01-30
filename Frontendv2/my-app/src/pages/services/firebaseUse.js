@@ -18,13 +18,9 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
 const auth = firebase.auth();
-//const db = firebase.firestore();
-
 
 async function signInWithGoogle(){
-    auth
-    .signInWithPopup(provider)
-    .catch(function (error){console.error(error);});
+    auth.signInWithPopup(provider).catch(function (error){ console.error(error); });
 }
 
 const signOutAcc = () => auth.signOut().catch(function (error){console.error(error);});
@@ -35,13 +31,6 @@ async function checkLogin(){
             rec(user ? user : false)       
         })
     })
-    
 }
 
-
-export {
-    auth, 
-    signInWithGoogle, 
-    signOutAcc, 
-    checkLogin,
-}
+export { auth, signInWithGoogle, signOutAcc, checkLogin }

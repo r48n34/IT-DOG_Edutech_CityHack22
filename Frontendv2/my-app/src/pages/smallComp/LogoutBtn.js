@@ -9,6 +9,14 @@ import { logoutErrorSwal } from '../utility/swalCall'
 function LogoutBtn(props) {
     let navigate = useNavigate();
 
+    function BtnFormat(){
+        return( <Button className="button" variant="dark" onClick={ async () => logoutHelper() }> Sign Out </Button> );
+    }
+
+    function TextFromat(){
+        return( <Nav.Link onClick={ async () => logoutHelper() }> {" "} Logout <FiLogOut/> </Nav.Link> );
+    }
+
     async function logoutHelper(){
         try{
             await signOutAcc();
@@ -17,18 +25,6 @@ function LogoutBtn(props) {
         catch(e){
             logoutErrorSwal();
         }
-    }
-
-    function BtnFormat(){
-        return(
-            <Button className="button" variant="dark" onClick={ async () => logoutHelper() }> Sign Out </Button>
-        );
-    }
-
-    function TextFromat(){
-        return(
-            <Nav.Link onClick={ async () => logoutHelper() }> {" "} Logout <FiLogOut/> </Nav.Link>
-        );
     }
 
     return( props.format === "btn" ? <BtnFormat/> : <TextFromat/>);

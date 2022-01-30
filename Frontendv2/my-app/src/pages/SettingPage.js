@@ -15,7 +15,7 @@ function SettingPage(){
     const [studentData, setStudentData] = useState([])
 
     useEffect( () => {
-        setStudentData( generateStudentArry(30) )
+        setStudentData( generateStudentArry(30) ) // generate 30 students
     },[])
 
     return(

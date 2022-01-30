@@ -48,6 +48,7 @@ function ClassTV(){
         <Container fluid style={{ backgroundColor:"#282c34" }}>
 
             <Row>
+
                 <Col md={3} lg={3}>
 
                     <Card>      
@@ -59,20 +60,17 @@ function ClassTV(){
 
                     <Card style={{ marginTop:"20px" }}>
                         <h1><b>Youtube list</b></h1>
-
                         <Row>
                             <LeftchannelList />
-
                         </Row>
-
                     </Card>      
 
                 </Col>
 
                 <Col md={9} lg={9}>
                     <YouTube videoId={currentVdoId} opts={opts} onReady={ (e) => e.target.pauseVideo()} />
-
                 </Col>
+                
             </Row>
  
         </Container>

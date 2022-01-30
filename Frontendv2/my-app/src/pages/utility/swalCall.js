@@ -23,7 +23,6 @@ function logoutErrorSwal(){
     })
 }
 
-
 async function addClassEventSwal(){
     const { value: formValues } = await MySwal.fire({
         title: 'Multiple inputs',

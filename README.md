@@ -69,17 +69,25 @@ for explain their class content and daily school informations.
 - react-youtube (Boardcasting month / week / morning school meeting)
 - fullcalendar-react (TimeTable library) with timegrid & daygrid
 
+- Further development:  
+Use Recoil / react query instead of Redux  
+Use next.js instead of react
+SEO enhancement
+
 ## 2. Services ( serverless base )
 - Firebase Authentication with google account  
 
+- Further development:   
+Using Firebase firestore or dynamobd / mongodb
+
 ## 3. Deployment & CI/CD
-- Netlify 
+- Netlify  
 
 ## 4. Design images references 
 - unDraw [https://undraw.co/]
 - materialui [https://materialui.co/colors/]
 
-## 4. Others data
+## 5. Others data
 - Chinese name generator data come from  
 香港熱門中文名字排行榜: [https://www.namechef.co/zh/popular-chinese-names/hong-kong/]  
 百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
