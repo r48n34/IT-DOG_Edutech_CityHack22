@@ -1,4 +1,4 @@
-import { uniqueNamesGenerator, names} from 'unique-names-generator';
+import { uniqueNamesGenerator, names } from 'unique-names-generator';
 
 import boyNameArr from '../jsonData/chineseNameBoy.json'
 import girlNameArr from '../jsonData/chineseNameGirl.json'
