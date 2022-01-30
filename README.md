@@ -12,25 +12,7 @@
 # Project site
 https://vibrant-jones-fe1b53.netlify.app/
 
-- Login is powered by Firebase Authentication, we CAN NOT access or steal your google account.
-
-# Description of the Project 
-
-### Aims for teacher, best for lecture.  
-As we all know that various platform that can be use to manage student and teacher online services.  
-Yet, some teachers reflect that the online teaching model and tons of services are making them confuse.  
-Expecially the senior teacher that may not used to perform certain actions on computer or smart phone.   
-    
-Hence, our vision is to assist all the teacher to using a easy to access,   
-easy to use and easy to learn platform for enhancing online or hybrid teaching experiences.  
-
-### e-class / canvas / google classroom / CMS alternative?  
-The project is not a alternative of those product services,   
-but a extra platform for those in primary / secondary / other education institution for manage or light services for teaching.  
-Out vision is to help teachers to achieve better teaching assist with the platform,   
-for explain their class content and daily school informations.  
-
-# 3. Most Impactful Features of the Project
+# Features
 1. Full online class Management    
 <img src="assets/login.png" width="600" alt="project_logo"/>
 
@@ -54,9 +36,10 @@ for explain their class content and daily school informations.
 
 # Tech used
 ## 1. Front End
+(Hours involved: 12 hrs for develop frontend protocol with login)
 - React  
-- Redux (Recoil is better btw)
-- react-router-dom-v6 ( Yeah we are using v6 not v5 / 4)
+- Redux 
+- react-router-dom-v6 
 - React bootstrap (css framework)
 - react-icons (All icon display)
 - sweetalert2-react-content (pop alert library)
@@ -64,7 +47,7 @@ for explain their class content and daily school informations.
 - react-chartjs-2 (Graph display library)
 - moment.js (Time formal library)
 - react-youtube (Boardcasting month / week / morning school meeting)
-- fullcalendar-react (TimeTable library) with timegrid & daygrid
+- fullcalendar-react (TimeTable library) with timegrid & daygrid  
 
 ## 2. Services ( serverless base )
 - Firebase Authentication with google account  
