@@ -22,7 +22,7 @@ Yet, some teachers reflect that the online teaching model and tons of services a
 Expecially the senior teacher that may not used to perform certain actions on computer or smart phone.   
     
 Hence, our vision is to assist all the teacher to using a easy to access,   
-easy to use and easy to learn platform for enhancing online or hybird teaching experiences.  
+easy to use and easy to learn platform for enhancing online or hybrid teaching experiences.  
 
 ### e-class / canvas / google classroom / CMS alternative?  
 The project is not a alternative of those product services,   
@@ -85,5 +85,5 @@ for explain their class content and daily school informations.
 百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
 
 # Link
-- Later
+- PPT pdf: in assets/itdogch2022ppt.pdf
 - < 3 minute Youtube Video Link for Project Demo >
