@@ -13,6 +13,7 @@
 https://vibrant-jones-fe1b53.netlify.app/
 
 - Login is powered by Firebase Authentication, we CAN NOT access or steal your google account.
+- Any Google account can be login through the system currently
 
 # Description of the Project (300 words)
 
