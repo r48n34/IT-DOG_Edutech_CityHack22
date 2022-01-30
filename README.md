@@ -4,18 +4,17 @@
 
 ## Team: IT DOG
 ## Members
-- Ng Chun Hei (Leader)
-- Hui Ka Fai 
-- Ko Man Yeung 
-- Lee Kam Hung 
+- [reemo](https://github.com/r48n34)
+- [komarcus](https://github.com/komarcus)
+- [hhui0921](https://github.com/hhui0921)
+- [invalidname1911](https://github.com/invalidname1911)
 
 # Project site
 https://vibrant-jones-fe1b53.netlify.app/
 
 - Login is powered by Firebase Authentication, we CAN NOT access or steal your google account.
-- Any Google account can be login through the system currently
 
-# Description of the Project (300 words)
+# Description of the Project 
 
 ### Aims for teacher, best for lecture.  
 As we all know that various platform that can be use to manage student and teacher online services.  
@@ -30,10 +29,6 @@ The project is not a alternative of those product services,
 but a extra platform for those in primary / secondary / other education institution for manage or light services for teaching.  
 Out vision is to help teachers to achieve better teaching assist with the platform,   
 for explain their class content and daily school informations.  
-
-### One for all, All for one.
-      tous pour un, un pour tous
-
 
 # 3. Most Impactful Features of the Project
 1. Full online class Management    
@@ -85,6 +80,3 @@ for explain their class content and daily school informations.
 - Chinese name generator data come from  
 香港熱門中文名字排行榜: [https://www.namechef.co/zh/popular-chinese-names/hong-kong/]  
 百家姓wiki: [https://zh.wikipedia.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93]  
-
-# Link
-- https://youtu.be/dz0ZgZrbxTs
