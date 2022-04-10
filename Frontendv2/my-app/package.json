@@ -20,7 +20,7 @@
     "firebase": "^9.6.5",
     "fullcalendar": "^5.10.1",
     "history": "^5.2.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
     "react-canvas-draw": "^1.2.1",
